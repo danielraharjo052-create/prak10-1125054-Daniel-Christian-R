@@ -4,7 +4,6 @@ package controller;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import model.Mahasiswa;
 import util.PrintUtil;
 import view.PrintView;
@@ -16,42 +15,42 @@ public class PrintController {
     public void runProgram() {
 
         List<String> daftarBuah = new ArrayList<>();
-        daftarBuah.add("Mangga");
-        daftarBuah.add("Apel");
-        daftarBuah.add("Jeruk");
+        daftarBuah.add("Strawwberry");
+        daftarBuah.add("Anggur");
+        daftarBuah.add("Delima");
 
         Integer[] angka = {30, 10, 20};
 
         List<Mahasiswa> daftarMahasiswa = new ArrayList<>();
-        daftarMahasiswa.add(new Mahasiswa("103", "Kevmet"));
-        daftarMahasiswa.add(new Mahasiswa("101", "AndiCobra"));
-        daftarMahasiswa.add(new Mahasiswa("102", "Budi"));
+        daftarMahasiswa.add(new Mahasiswa("103", "Jawa"));
+        daftarMahasiswa.add(new Mahasiswa("101", "Ireng"));
+        daftarMahasiswa.add(new Mahasiswa("102", "Danil"));
 
         Mahasiswa[] arrayMahasiswa = {
-            new Mahasiswa("103", "Kevmet"),
-            new Mahasiswa("101", "AndiCobra"),
-            new Mahasiswa("102", "Budi")
+            new Mahasiswa("103", "Jawa"),
+            new Mahasiswa("101", "Ireng"),
+            new Mahasiswa("102", "Danil")
         };
 
-        view.printTitle("Print List");
+        view.printTitle("print listnya");
         PrintUtil.printList(daftarBuah);
 
-        view.printTitle("Print Array");
+        view.printTitle("print array");
         PrintUtil.printList(angka);
 
-        view.printTitle("Print Printable List");
+        view.printTitle("print printable list");
         PrintUtil.printPrintableList(daftarMahasiswa);
 
-        view.printTitle("Print Sorted List");
+        view.printTitle("print sorted list");
         PrintUtil.printListSorted(daftarMahasiswa);
 
-        view.printTitle("List Asli Setelah Sorting");
+        view.printTitle("list asli stlah sort");
         PrintUtil.printPrintableList(daftarMahasiswa);
 
-        view.printTitle("Print Sorted Array");
+        view.printTitle("sorted array");
         PrintUtil.printListSorted(arrayMahasiswa);
 
-        view.printTitle("Array Asli Setelah Sorting");
+        view.printTitle("array asli stlah sort");
         PrintUtil.printPrintableList(Arrays.asList(arrayMahasiswa));
     }
 }
